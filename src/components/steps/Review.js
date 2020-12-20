@@ -1,33 +1,25 @@
 import React from "react";
 
-export default function Review ({ formData, step, navigation }) {
+export default function Review ({step, navigation }) {
   const { go } = navigation;
-  const {
-    nombre,
-    segundoNombre,
-    apellidoPaterno,
-    apellidoMaterno,
-    dia,
-    mes,
-    anio,
-    celular,
-    email,
-  } = formData;
 
   return (
+    <div className="chat">
+    <img className="image" src="https://image.freepik.com/free-photo/attractive-female-wearing-face-mask-indoor_181624-24246.jpg" alt="woman"/>
     <div>
-      <h3>¿Tus datos son correctos?</h3>
-      <p>{nombre} {segundoNombre} {apellidoPaterno} {apellidoMaterno}</p>
-      <p>{dia} {mes} {anio}</p>
-      <p>{celular} {email}</p>
+      <div className="review">
+        <p>Si tus datos son correctos por favor continuemos</p>
+      </div>
       {step.id === "review" &&
-      <button
+        <button
+        style={{marginLeft:"10px", marginTop:"20px", backgroundColor:"#F15383", border:"none"}}
+        className="btn btn-primary"
         onClick={() => go('submit')}
-      >
-        Iniciar
-      </button>
+        >
+          Iniciar
+        </button>
       }
-
+    </div>
     </div>
   );
 };

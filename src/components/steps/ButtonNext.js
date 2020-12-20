@@ -5,13 +5,16 @@ export default function BottonNext({ navigation }) {
     <div>
       <div>
             <button
+              className="btn btn-danger"
               onClick={() => navigation.previous()}
-            >
-              Back
+              >
+              Atrás
             </button>
             <button
+              style={{marginLeft:"10px", backgroundColor:"#F15383", border:"none"}}
+              className="btn btn-primary"
               onClick={() => navigation.next()}>
-              Next
+              Siguiente
             </button>
           </div>
     </div>

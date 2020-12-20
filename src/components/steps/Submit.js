@@ -1,9 +1,27 @@
 import React from 'react'
 
-export default function Submit() {
+export default function Submit({formData}) {
+
+  const {
+    nombre,
+    segundoNombre,
+    apellidoPaterno,
+    apellidoMaterno,
+    dia,
+    mes,
+    anio,
+    celular,
+    email,
+  } = formData;
+
+
   return (
-    <div>
-      <h3>Gracias por proporcionarnos tus datos, en un momento serás atendido por uno de nuestros operadores.</h3>
+    <div className="chat">
+    <div style={{marginLeft:"87px"}} className="user-output">
+      <p>{nombre} {segundoNombre} {apellidoPaterno} {apellidoMaterno}</p>
+      <p>{dia} {mes} {anio}</p>
+      <p>{celular} {email}</p>
+    </div>
     </div>
   )
 }
