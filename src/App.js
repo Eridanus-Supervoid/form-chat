@@ -1,13 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
-import Name from './components/Name'
+import ChatForm from './components/ChatForm'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <Name/>
-      </header>
+      <ChatForm />
     </div>
   );
 }
